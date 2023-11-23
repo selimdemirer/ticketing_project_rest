@@ -32,7 +32,7 @@ public class UserController {
         return ResponseEntity.ok(new ResponseWrapper("Users are successfully retrieved", userDTOList, HttpStatus.OK));
     }
 
-    @GetMapping("/{username]")// api end point
+    @GetMapping("/{username}")// api end point
     @RolesAllowed("Admin")
     @Operation(summary = "Get user by username")
     public ResponseEntity<ResponseWrapper> getUserByUserName(@PathVariable("username") String userName) {
