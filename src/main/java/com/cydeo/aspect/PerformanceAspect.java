@@ -18,12 +18,15 @@ public class PerformanceAspect {
     @Around("executionTimePC()")
     public Object aroundAnyExecutionTimeAdvice(ProceedingJoinPoint proceedingJoinPoint) {
 
+        //Before
         long beforeTime = System.currentTimeMillis();
         Object result = null;
         log.info("Execution starts:");
 
         try {
+            //JoinPoint execution
             result = proceedingJoinPoint.proceed();
+            //After
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
