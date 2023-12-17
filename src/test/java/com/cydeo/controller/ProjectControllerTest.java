@@ -42,7 +42,7 @@ class ProjectControllerTest {
     @BeforeAll
     static void setUp(){
 
-         token = "Bearer " + getToken();
+        token = "Bearer " + getToken();
 
         manager = new UserDTO(2L,
                 "",
